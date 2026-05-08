@@ -7,9 +7,9 @@ import { MOCK_USER } from '@/mock/data';
 
 type IoniconsName = React.ComponentProps<typeof Ionicons>['name'];
 
-function ActionButton({ icon, label }: { icon: IoniconsName; label: string }) {
+function ActionButton({ icon, label, onPress }: { icon: IoniconsName; label: string; onPress?: () => void }) {
   return (
-    <TouchableOpacity style={styles.actionItem}>
+    <TouchableOpacity style={styles.actionItem} onPress={onPress}>
       <View style={styles.actionCircle}>
         <Ionicons name={icon} size={26} color={Colors.textPrimary} />
       </View>
@@ -70,7 +70,7 @@ export default function HomeScreen() {
             <Ionicons name="shield-checkmark" size={15} color={Colors.accentLt} />
           </View>
           <View style={styles.balanceAmountRow}>
-            <Text style={styles.balanceAmount}>RM*****</Text>
+            <Text style={styles.balanceAmount}>RM8,501.00</Text>
             <TouchableOpacity style={styles.eyeBtn}>
               <Ionicons name="eye-off-outline" size={20} color={Colors.textSecondary} />
             </TouchableOpacity>
@@ -86,7 +86,7 @@ export default function HomeScreen() {
       <View style={styles.actionsCard}>
         <ActionButton icon="add" label="Add money" />
         <ActionButton icon="scan-outline" label="Scan QR" />
-        <ActionButton icon="arrow-forward" label="Send money" />
+        <ActionButton icon="arrow-forward" label="Send money" onPress={() => router.push('/send-money')} />
       </View>
 
       {/* ── Everyday Account ── */}
@@ -102,7 +102,7 @@ export default function HomeScreen() {
           {/* Main account */}
           <View style={[styles.accountCard, styles.accountLeft]}>
             <Text style={styles.accountLabel}>Main account</Text>
-            <Text style={styles.accountBalance}>RM*****</Text>
+            <Text style={styles.accountBalance}>RM8,251.00</Text>
             <View style={styles.cardSpacer} />
             <TouchableOpacity>
               <Text style={styles.viewTxText}>View transactions</Text>
@@ -112,7 +112,7 @@ export default function HomeScreen() {
           {/* Pockets */}
           <View style={[styles.accountCard, styles.accountRight]}>
             <Text style={styles.accountLabel}>Pockets</Text>
-            <Text style={styles.accountBalance}>RM*****</Text>
+            <Text style={styles.accountBalance}>RM250.00</Text>
             <View style={styles.interestBadge}>
               <Text style={styles.interestText}>Up to 3.55% p.a.</Text>
             </View>
