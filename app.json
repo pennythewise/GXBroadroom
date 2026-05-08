@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "GX Boardroom",
+    "slug": "gx-boardroom",
+    "version": "1.0.0",
+    "scheme": "gxboardroom",
+    "platforms": ["ios", "android", "web"],
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0E0B1E",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.gxbank.boardroom"
+    },
+    "android": {
+      "package": "com.gxbank.boardroom"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": ["expo-router"]
+  }
+}
