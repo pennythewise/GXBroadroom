@@ -110,7 +110,7 @@ export default function HomeScreen() {
           </View>
 
           {/* Pockets */}
-          <View style={[styles.accountCard, styles.accountRight]}>
+          <TouchableOpacity style={[styles.accountCard, styles.accountRight]} activeOpacity={0.85} onPress={() => router.push('/pockets' as never)}>
             <Text style={styles.accountLabel}>Pockets</Text>
             <Text style={styles.accountBalance}>RM250.00</Text>
             <View style={styles.interestBadge}>
@@ -121,7 +121,7 @@ export default function HomeScreen() {
                 <View key={i} style={[styles.avatar, { backgroundColor: color }, i > 0 && styles.avatarShift]} />
               ))}
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
 
