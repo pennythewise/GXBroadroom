@@ -110,6 +110,15 @@ export const MOCK_GOAL_TX = {
 };
 
 // Mascot narrative for Page 1 of Boardroom Report (Sprint 3)
+export const MOCK_POCKETS = {
+  totalBalance: 5250,
+  items: [
+    { id: 'holding', name: 'Holding Pocket', balance: 5000, type: 'holding' },
+    { id: 'invest',  name: 'Invest',         balance: 250,  type: 'invest'  },
+    { id: 'holiday', name: 'Holiday',         balance: 0,    type: 'holiday' },
+  ],
+};
+
 export const MOCK_MASCOT_COPY =
   `Hey ${MOCK_USER.name}! This month was a tug-of-war. The Scout found an extra RM400 from your internship, ` +
   `but the Sentinel noticed a heavy spending streak in Kepong. We're still on track for ${MOCK_GOAL.name}, ` +
