@@ -230,6 +230,83 @@ Demo shortcut: hardcode a "Trigger Board Meeting" button on dev builds to skip 3
 
 ---
 
+## On-Demand Board Session (User-Triggered)
+
+Accessible anytime via the Boardroom card in Discover tab.
+Separate from the monthly cron report — user-initiated, context-focused.
+
+### Screen 1 — Convene prompt
+
+Header: "Convene your board"
+Subtext: "Tell your board what's on your mind. They'll analyse your finances through that lens and return a focused report."
+
+**Quick context chips** (multi-select, at least one required to unlock CTA):
+
+| Chip label | Context key |
+|---|---|
+| I just received money | `windfall` |
+| I have a new goal | `goal` |
+| Planning a big purchase | `buy` |
+| Feeling financially stressed | `stress` |
+| My income just changed | `job` |
+| Just want a check-in | `check` |
+
+- Tapping a chip auto-fills the detail text field with a contextual prompt string
+- Free-text field below chips: optional, user can edit or ignore
+- CTA "Convene board" disabled until ≥1 chip selected
+- On tap → Screen 2
+
+**Auto-fill strings per chip:**
+```json
+{
+  "windfall": "I just received RM320 in reimbursements. What should I do with it?",
+  "goal": "I want to start saving for a new laptop — RM2,500 target.",
+  "buy": "Thinking about booking a hotel for the long weekend. Is now a good time?",
+  "stress": "I've been overspending and I'm worried about next month.",
+  "job": "My internship allowance increased. How should I adjust my plan?",
+  "check": "Just want a quick overview of where I stand financially."
+}
+```
+
+### Screen 2 — Agent processing
+
+Header: "Board in session"
+
+4 agent ring cards in a 2×2 grid. Each card:
+- Circular SVG progress ring (fills 0→100%)
+- Agent name + live status label (cycles through states as ring fills)
+- Rings run concurrently with staggered starts (~300ms apart)
+
+| Agent | Ring colour | Status label sequence |
+|---|---|---|
+| Sentinel | `#F09595` | Warming up → Scanning transactions → Calculating S₂S → Done |
+| Scout | `#5DCAA5` | Warming up → Scanning inflows → Detecting windfall → Done |
+| Architect | `#EF9F27` | Warming up → Loading goals → Modelling allocation → Done |
+| Shield | `#A78BFA` | Warming up → Reviewing outflows → Assessing shields → Done |
+
+Below grid: Mascot synthesis progress bar
+- Increments as each agent completes (25% per agent)
+- Status text: "X of 4 agents complete" → "Synthesising your brief..."
+- Auto-advances to Screen 3 ~800ms after all 4 done
+
+### Screen 3 — Focused report
+
+No page stepper. Shorter than monthly report.
+
+**Mascot brief** (top card, purple left border):
+- Agent-0 constructs message using selected chip as prompt modifier
+- Example for `windfall` chip: "Penny, your board pulled together a focused brief on your windfall. Here's what they found and what they recommend."
+
+**4 agent insight cards** (2×2 grid):
+- Same card format as monthly report Page 2
+- Content scoped to the user's declared context, not a full monthly sweep
+
+**Board recommendation** (bottom):
+- 2 targeted approve actions based on context
+- Same one-tap approve pattern as monthly Action Plan (purple → green "Done")
+- No full 4-page report structure — this is a brief, not a board meeting
+---
+
 ## Sprint Order
 
 1. **Sprint 1** — ResilienceState + S₂S Velocity Engine (Agent-2)
