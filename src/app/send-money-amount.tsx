@@ -18,7 +18,7 @@ const mockRecipient = {
   accountNo:    '179334828463046',
   bank:         'Maybank',
   transferType: 'DuitNow',
-  balance:      133.50,
+  balance:      8251.00,
 };
 
 const QUICK_REFS = ['Lunch', 'Yamcha', 'Hutang'];

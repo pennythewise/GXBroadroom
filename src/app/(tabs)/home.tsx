@@ -84,8 +84,8 @@ export default function HomeScreen() {
 
       {/* ── Quick Actions ── */}
       <View style={styles.actionsCard}>
-        <ActionButton icon="add" label="Add money" />
-        <ActionButton icon="scan-outline" label="Scan QR" />
+        <ActionButton icon="add" label="Add money" onPress={() => router.push('/add-money' as never)} />
+        <ActionButton icon="scan-outline" label="Scan QR" onPress={() => router.push('/scan-qr' as never)} />
         <ActionButton icon="arrow-forward" label="Send money" onPress={() => router.push('/send-money')} />
       </View>
 

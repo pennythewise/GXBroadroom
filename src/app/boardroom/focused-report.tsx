@@ -101,15 +101,21 @@ export default function FocusedReportScreen() {
                 <Text style={styles.recTitle}>{rec.title}</Text>
                 <Text style={styles.recSub}>{rec.subtitle}</Text>
               </View>
-              <TouchableOpacity
-                style={[styles.approveBtn, approved.has(rec.id) && styles.approveBtnDone]}
-                activeOpacity={0.8}
-                onPress={() => toggleApprove(rec.id)}
-              >
-                <Text style={styles.approveBtnText}>
-                  {approved.has(rec.id) ? 'Done ✓' : 'Approve'}
-                </Text>
-              </TouchableOpacity>
+              {rec.action === 'explore' ? (
+                <TouchableOpacity style={styles.exploreBtn} activeOpacity={0.8}>
+                  <Text style={styles.exploreBtnText}>Explore</Text>
+                </TouchableOpacity>
+              ) : (
+                <TouchableOpacity
+                  style={[styles.approveBtn, approved.has(rec.id) && styles.approveBtnDone]}
+                  activeOpacity={0.8}
+                  onPress={() => toggleApprove(rec.id)}
+                >
+                  <Text style={styles.approveBtnText}>
+                    {approved.has(rec.id) ? 'Done ✓' : 'Approve'}
+                  </Text>
+                </TouchableOpacity>
+              )}
             </View>
             {idx < MOCK_FOCUSED_BRIEF.recommendations.length - 1 && (
               <View style={styles.divider} />
@@ -273,6 +279,18 @@ const styles = StyleSheet.create({
   },
   approveBtnText: {
     color: Colors.textPrimary,
+    fontSize: Typography.caption,
+    fontWeight: '700',
+  },
+  exploreBtn: {
+    borderWidth: 1.5,
+    borderColor: Colors.accent,
+    borderRadius: Radius.button,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: 10,
+  },
+  exploreBtnText: {
+    color: Colors.accentLt,
     fontSize: Typography.caption,
     fontWeight: '700',
   },

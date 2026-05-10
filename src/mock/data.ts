@@ -1,7 +1,7 @@
 // All hardcoded demo/PoC data lives here. Never inline in components.
 
 export const MOCK_USER = {
-  name: 'Penny',
+  name: 'Farah',
   month: 'May 2026',
   monthShort: 'May',
   year: 2026,
@@ -126,7 +126,7 @@ export const MOCK_MASCOT_COPY =
 
 export const MOCK_FOCUSED_BRIEF = {
   mascotQuote:
-    `Penny, your board pulled together a focused brief on your windfall. ` +
+    `Farah, your board pulled together a focused brief on your windfall. ` +
     `Here's what they found and what they recommend.`,
   agents: [
     {
@@ -163,11 +163,19 @@ export const MOCK_FOCUSED_BRIEF = {
       id: 'rec1',
       title: 'Allocate RM200 → Okinawa goal',
       subtitle: 'Architect · recovers the delay',
+      action: 'approve' as const,
     },
     {
       id: 'rec2',
       title: 'Move RM120 → Emergency Pocket',
       subtitle: 'Scout · rest of windfall',
+      action: 'approve' as const,
+    },
+    {
+      id: 'rec3',
+      title: 'Get Travel Insurance',
+      subtitle: 'Shield · protect your trip',
+      action: 'explore' as const,
     },
   ],
 };
