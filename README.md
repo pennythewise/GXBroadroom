@@ -43,7 +43,6 @@ GX Boardroom is a **multi-agent AI system** embedded inside GXBank. It runs five
 | Agent-2 | **Sentinel** | Spend event | Calculates Safe-to-Spend (S₂S). Flags velocity spikes. |
 | Agent-3 | **Architect** | Add money / goal check | Reminds user of active goals. Calculates ETA impact. |
 | Agent-4 | **Shield** | Send money | Calculates Risk Score (Rₛ). Intercepts suspicious transfers. |
-| Agent-5 | **Mascot** | Synthesis | Converts agent outputs into sentimental, human-language context. |
 
 **ResilienceState** — a single stateful object maintained per user, updated on every agent event:
 
