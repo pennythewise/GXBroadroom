@@ -38,7 +38,7 @@ GX Boardroom is a **multi-agent AI system** embedded inside GXBank. It runs five
 
 | Agent | Name | Trigger | Core Function |
 |---|---|---|---|
-| Agent-0 | **Manager** | Always-on | Orchestrates all agents. Synthesises outputs into Mascot dialogue. |
+| Agent-0 | **Mascot Manager** | Always-on | Orchestrates all agents. Synthesises outputs into Mascot dialogue. |
 | Agent-1 | **Scout** | Inflow detected | Detects windfalls, reimbursements, salary. Prompts smart allocation. |
 | Agent-2 | **Sentinel** | Spend event | Calculates Safe-to-Spend (S₂S). Flags velocity spikes. |
 | Agent-3 | **Architect** | Add money / goal check | Reminds user of active goals. Calculates ETA impact. |
@@ -70,7 +70,7 @@ A structured **4-page report** synthesised by Agent-0:
 
 | Page | Name | What it delivers |
 |---|---|---|
-| 1 | **Executive Synthesis** | Mascot reads the mood of the month in plain language. No jargon. |
+| 1 | **Executive Synthesis** | Mascot Manager reads the mood of the month in plain language. No jargon. |
 | 2 | **Agent Insights** | Each agent surfaces one golden insight. Tap to drill into full analysis. |
 | 3 | **Action Plan** | One-tap approve buttons. Declarative banking — no forms, no chatting. |
 | 4 | **Emotional Impact** | Resilience score ring. Forward-looking projections. Future-self framing. |
