@@ -286,7 +286,7 @@ src/
 ├── store/
 │   └── resilience.ts             # Zustand ResilienceState
 ├── mock/
-│   └── data.ts                   # All hardcoded PoC data
+│   └── data.ts                   # PoC data
 └── constants/
     └── theme.ts                  # Design tokens
 ```
@@ -295,7 +295,7 @@ src/
 
 ## Design Tokens
 
-All colours imported from `constants/theme.ts`. Never hardcode.
+All colours imported from `constants/theme.ts`. 
 
 ```ts
 export const theme = {
@@ -318,7 +318,7 @@ export const theme = {
 
 ---
 
-## Mock Data (PoC stage)
+## Mock Data (as for PoC stage)
 
 ```json
 {
