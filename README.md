@@ -109,7 +109,7 @@ Focused report
 | My income just changed | `job` | "My internship allowance increased. How should I adjust my plan?" |
 | Just want a check-in | `check` | "Just want a quick overview of where I stand financially." |
 
-4 agents run its analysis and action plan with the new context
+4 agents run its analysis and action plan with the new context.
 Auto-navigates to focused report 800ms after all agents complete. No button tap required.
 
 ---
