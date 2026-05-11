@@ -326,11 +326,11 @@ export const theme = {
 
 ---
 
-## Mock Data (PoC)
+## Mock Data (PoC stage)
 
 ```json
 {
-  "user": "Penny",
+  "user": "Farah",
   "month": "May 2026",
   "income": { "internship": 2120, "windfall": 320, "brand_deals": 400, "total": 2840 },
   "spend": {
