@@ -135,7 +135,7 @@ Review transfer screen
                     └─→ [Cancel] → Transfer cancelled, Shield logs the attempt
 ```
 
-> **Behavioural rationale:** Scammers engineer the panic moment. The breathing UI is not decoration — it is a deliberate **pattern interrupt** to return the user to rational decision-making before any money moves. The holding pocket removes urgency without blocking the transfer permanently.
+> **Behavioural rationale:** Scammers engineer the panic moment. The "speed bump" floating UI is not decoration — it is a deliberate **pattern interrupt** to return the user to rational decision-making before any money moves. The holding pocket removes urgency without blocking the transfer permanently.
 
 **Holding Pocket states:**
 
