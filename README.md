@@ -109,15 +109,7 @@ Focused report
 | My income just changed | `job` | "My internship allowance increased. How should I adjust my plan?" |
 | Just want a check-in | `check` | "Just want a quick overview of where I stand financially." |
 
-**Agent processing timing** (concurrent, staggered starts):
-
-```
-Sentinel:  delay   0ms,  duration 2800ms
-Scout:     delay 300ms,  duration 3200ms
-Architect: delay 600ms,  duration 2500ms
-Shield:    delay 900ms,  duration 3600ms
-```
-
+4 agents run its analysis and action plan with the new context
 Auto-navigates to focused report 800ms after all agents complete. No button tap required.
 
 ---
