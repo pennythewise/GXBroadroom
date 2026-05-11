@@ -380,5 +380,5 @@ npm run lint         # ESLint
 | RM1.9B debt carried by 53,000 youths under 30 | New Straits Times, 2024 |
 | RM2.8B lost to scams in 2025 | Fintech News Malaysia, 2026 |
 | 95% of online fraud are authorised transactions | Fintech News Malaysia, 2026 |
-| 37% of Gen Z overspend at checkout | Internal research synthesis |
+| 37% of Gen Z overspend at checkout | Opinium, 2024 |
 | RM250,000 investable assets for Maybank Premier advisory | Maybank Premier, 2024 |
